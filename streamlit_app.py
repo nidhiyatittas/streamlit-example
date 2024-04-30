@@ -22,7 +22,7 @@ st.selectbox('Do you want to save generated data?', ["Yes","No"])
 
 for i in range(2):
    st.write("""# Multi sensor Synthetic data generation using Carla and Scenic """)
-   st.selectbox("Number of sensors?", [1,2,3,4,5,6,7,8,9,10])
+   i=st.selectbox("Number of sensors?", [1,2,3,4,5,6,7,8,9,10])
 for i in range(0,SensorNumber):
 
        st.header(f"Location of the Sensor")
