@@ -3,28 +3,11 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
-"""
-# Welcome to Streamlit!
 
-
-
-
-Edit `/streamlit_app.py` to customize this app to your heart's desire :heart:.
-If you have any questions, checkout our [documentation](https://docs.streamlit.io) and [community
-forums](https://discuss.streamlit.io).
-
-In the meantime, below is an example of what you can do with just a few lines of code:
-"""
 genre = st.radio(
     "Pick a SCENIC behavior",
-    ["Ego lane changing behavior", "***Drama***", "Documentary :movie_camera:"])
-"""
--- ego accelerating backward behavior
--- pedestrian walking through the sidewalk as ego passes behavior
--- ego breaks when pedestrian crosses the road behavior
--- ego waiting for the pedestrian while taking reverse behavior
---pedestrian crossing before lane change behavior
-"""
+    ["Ego lane changing behavior", "Pedestrian walking through the sidewalk as ego passes behavior", "Ego applies breaks when pedestrian crosses the road behavior","Ego waiting for the pedestrian while taking reverse behavior","Pedestrian crossing before lane change behavior"])
+
 num_points = st.slider("Number of points in spiral", 1, 10000, 1100)
 num_turns = st.slider("Number of turns in spiral", 1, 300, 31)
 
