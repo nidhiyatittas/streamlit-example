@@ -18,7 +18,7 @@ sensor = st.radio(
  "Pick a Sensor",
  ["Camera RGB","Camera Depth(Raw)"," Camera Depth (Gray Scale)"," Camera Depth (Logarithmic Gray Scale)","Camera Semantic Segmentation (Raw)","Camera Semantic Segmentation(CityScapes Palette)","Lidar (Ray-Cast)"])
 
-int i
+
 for i in range(1,SensorNumber):
 
        st.header(f"Location of the Sensor")
