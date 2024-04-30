@@ -21,36 +21,24 @@ sensor = st.radio(
 st.selectbox('Do you want to save generated data?', ["Yes","No"])
 
 
+for i in range(SensorNumber):
 
-
-st.header(f"Location of the Sensor")
-xvalue = st.number_input("Enter the x value", value=None, placeholder="Type a number...")
-
-
-yvalue = st.number_input("Enter the y value", value=None, placeholder="Type a number...")
-
-
-zvalue = st.number_input("Enter the z value", value=None, placeholder="Type a number...")
-
-
-st.header(f"Enter the Rotation values for the Sensor")
-
-ptchValue = st.number_input("Enter the Pitch value", value=None, placeholder="Type a number...")
-
-
-yawValue = st.number_input("Enter the Yaw value", value=None, placeholder="Type a number...")
-
-# Creating lists to store start and end dates
-lista_dt_inicio = []
-lista_dt_fim = []
-
-# Pegando os ativos do usuário e populando as listas
-for i in range(int(qtd_ativo)):
-    lista_ativos.append(st.text_input("Nome do ativo + .SA: ", key=str(i)))
-    dt_inicio = st.date_input("Data de início: ", key="start_date_" + str(i))
-    dt_fim = st.date_input("Data de fim: ", key="end_date_" + str(i))
+    st.header(f"Location of Sensor {i+1}")
+    xvalue = st.number_input("Enter the x value {i+1}", value=None, placeholder="Type a number...", key=f"x_{i}")
     
-    # Storing start and end dates
-    lista_dt_inicio.append(dt_inicio)
-    lista_dt_fim.append(dt_fim)
+    
+    yvalue = st.number_input("Enter the y value {i+1}", value=None, placeholder="Type a number...", key=f"y_{i}")
+    
+    
+    zvalue = st.number_input("Enter the z value {i+1}", value=None, placeholder="Type a number...", key=f"z_{i}")
+    
+    
+    st.header(f"Enter the Rotation values for the Sensor {i+1}")
+    
+    ptchValue = st.number_input("Enter the Pitch value {i+1}", value=None, placeholder="Type a number...", key=f"pitch_{i}")
+    
+    
+    yawValue = st.number_input("Enter the Yaw value {i+1}", value=None, placeholder="Type a number...", key=f"yaw_{i}")
+
+
 
