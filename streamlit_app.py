@@ -18,24 +18,24 @@ sensor = st.radio(
  "Pick a Sensor",
  ["Camera RGB","Camera Depth(Raw)"," Camera Depth (Gray Scale)"," Camera Depth (Logarithmic Gray Scale)","Camera Semantic Segmentation (Raw)","Camera Semantic Segmentation(CityScapes Palette)","Lidar (Ray-Cast)"])
 
-
+st.selectbox('Do you want to save generated data?', ["Yes","No"])
 for i in range(0,SensorNumber):
 
        st.header(f"Location of the Sensor")
        xvalue = st.number_input("Enter the x value", value=None, placeholder="Type a number...")
        
        
-       number = st.number_input("Enter the y value", value=None, placeholder="Type a number...")
+       yvalue = st.number_input("Enter the y value", value=None, placeholder="Type a number...")
        
        
-       number = st.number_input("Enter the z value", value=None, placeholder="Type a number...")
+       zvalue = st.number_input("Enter the z value", value=None, placeholder="Type a number...")
        
        
        st.header(f"Enter the Rotation values for the Sensor")
        
-       number = st.number_input("Enter the Pitch value", value=None, placeholder="Type a number...")
+       ptchValue = st.number_input("Enter the Pitch value", value=None, placeholder="Type a number...")
        
        
-       number = st.number_input("Enter the Yaw value", value=None, placeholder="Type a number...")
+       yawValue = st.number_input("Enter the Yaw value", value=None, placeholder="Type a number...")
        
-       st.selectbox('Do you want to save generated data?', ["Yes","No"])
+       
