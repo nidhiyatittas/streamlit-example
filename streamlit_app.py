@@ -19,6 +19,11 @@ sensor = st.radio(
  ["Camera RGB","Camera Depth(Raw)"," Camera Depth (Gray Scale)"," Camera Depth (Logarithmic Gray Scale)","Camera Semantic Segmentation (Raw)","Camera Semantic Segmentation(CityScapes Palette)","Lidar (Ray-Cast)"])
 
 st.selectbox('Do you want to save generated data?', ["Yes","No"])
+
+for i in range(100):
+   ** a=st.text_box(“val”)**
+   ** l.append(a)**
+  
 for i in range(0,SensorNumber):
 
        st.header(f"Location of the Sensor")
