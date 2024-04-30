@@ -22,7 +22,7 @@ sensor = st.radio(
 for i in range(0,SensorNumber):
 
        st.header(f"Location of the Sensor")
-       number = st.number_input("Enter the x value", value=None, placeholder="Type a number...")
+       xvalue = st.number_input("Enter the x value", value=None, placeholder="Type a number...")
        
        
        number = st.number_input("Enter the y value", value=None, placeholder="Type a number...")
