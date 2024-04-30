@@ -17,8 +17,14 @@ In the meantime, below is an example of what you can do with just a few lines of
 """
 genre = st.radio(
     "Pick a SCENIC behavior",
-    [":rainbow[Comedy]", "***Drama***", "Documentary :movie_camera:"])
-
+    ["Ego lane changing behavior", "***Drama***", "Documentary :movie_camera:"])
+"""
+-- ego accelerating backward behavior
+-- pedestrian walking through the sidewalk as ego passes behavior
+-- ego breaks when pedestrian crosses the road behavior
+-- ego waiting for the pedestrian while taking reverse behavior
+--pedestrian crossing before lane change behavior
+"""
 num_points = st.slider("Number of points in spiral", 1, 10000, 1100)
 num_turns = st.slider("Number of turns in spiral", 1, 300, 31)
 
