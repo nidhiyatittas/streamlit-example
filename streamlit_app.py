@@ -42,4 +42,4 @@ yawValue = st.number_input("Enter the Yaw value", value=None, placeholder="Type 
 
 for i in range(3):
    st.write("""# Multi sensor Synthetic data generation using Carla and Scenic """)
-   select[i]=st.selectbox("Number of sensors?", [1,2,3,4,5,6,7,8,9,10])    
+   selecti=st.selectbox("Number of sensors?", [1,2,3,4,5,6,7,8,9,10])    
