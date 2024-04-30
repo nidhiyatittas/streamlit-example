@@ -40,4 +40,4 @@ number = st.number_input("Enter the Pitch value", value=None, placeholder="Type 
 
 number = st.number_input("Enter the Yaw value", value=None, placeholder="Type a number...")
 
-st.selectbox('Do you want to save generated data?', [Yes,No])
+st.selectbox('Do you want to save generated data?', ["Yes","No"])
