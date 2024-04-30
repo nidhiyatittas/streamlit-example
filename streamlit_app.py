@@ -40,6 +40,12 @@ ptchValue = st.number_input("Enter the Pitch value", value=None, placeholder="Ty
 
 yawValue = st.number_input("Enter the Yaw value", value=None, placeholder="Type a number...")
 
-for i in range(3):
-   st.write("""# Multi sensor Synthetic data generation using Carla and Scenic """)
-   st.text_input("Nome do ativo + .SA: ",key=str(i))=st.selectbox("Number of sensors?", [1,2,3,4,5,6,7,8,9,10])    
+lista_ativos = []
+df2 = pd.DataFrame()
+qtd_ativo = st.number_input("Quantidade de ativos: ")
+
+# Pegando os ativos do usuário e populando a lista lista_ativos
+for i in range(int(qtd_ativo)):
+    lista_ativos.append(st.text_input("Nome do ativo + .SA: "))
+    dt_inicio = st.date_input("Data de início: ")
+    dt_fim = st.date_input("Data de fim: ")
