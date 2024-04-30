@@ -16,9 +16,8 @@ forums](https://discuss.streamlit.io).
 In the meantime, below is an example of what you can do with just a few lines of code:
 """
 genre = st.radio(
-    "What's your favorite movie genre",
-    [":rainbow[Comedy]", "***Drama***", "Documentary :movie_camera:"],
-    captions = ["Laugh out loud.", "Get the popcorn.", "Never stop learning."])
+    "Pick a SCENIC behavior",
+    [":rainbow[Comedy]", "***Drama***", "Documentary :movie_camera:"])
 
 num_points = st.slider("Number of points in spiral", 1, 10000, 1100)
 num_turns = st.slider("Number of turns in spiral", 1, 300, 31)
