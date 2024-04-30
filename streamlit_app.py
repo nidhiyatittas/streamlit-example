@@ -20,9 +20,9 @@ sensor = st.radio(
 
 st.selectbox('Do you want to save generated data?', ["Yes","No"])
 
-for i in range(100):
-   ** a=st.text_box(“val”)**
-   ** l.append(a)**
+for i in range(10):
+   st.write("""
+# Multi sensor Synthetic data generation using Carla and Scenic """)
   
 for i in range(0,SensorNumber):
 
