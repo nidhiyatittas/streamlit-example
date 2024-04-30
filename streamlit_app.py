@@ -11,6 +11,13 @@ genre = st.radio(
 st.header(f"Location of the Sensor")
 number = st.number_input("Enter the x value", value=None, placeholder="Type a number...")
 st.write('The x value is ', number)
+
+number2 = st.number_input("Enter the y value", value=None, placeholder="Type a number...")
+st.write('The y value is ', number2)
+
+number3 = st.number_input("Enter the y value", value=None, placeholder="Type a number...")
+st.write('The z value is ', number3)
+
 num_points = st.slider("Number of points in spiral", 1, 10000, 1100)
 num_turns = st.slider("Number of turns in spiral", 1, 300, 31)
 
