@@ -19,7 +19,7 @@ st.write('The SCENIC behavior is ', genre)
 sensor = st.radio(
  "Pick a Sensor",
  ["Camera RGB","Camera Depth(Raw)"," Camera Depth (Gray Scale)"," Camera Depth (Logarithmic Gray Scale)","Camera Semantic Segmentation (Raw)","Camera Semantic Segmentation(CityScapes Palette)","Lidar (Ray-Cast)"])
-st.write('The SCENIC behavior is ', sensor)
+st.write('The Sensor is ', sensor)
 
 
 
