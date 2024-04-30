@@ -23,23 +23,23 @@ st.selectbox('Do you want to save generated data?', ["Yes","No"])
 for i in range(2):
    st.write("""# Multi sensor Synthetic data generation using Carla and Scenic """)
    select[i]=st.selectbox("Number of sensors?", [1,2,3,4,5,6,7,8,9,10])
-for i in range(0,SensorNumber):
 
-       st.header(f"Location of the Sensor")
-       xvalue = st.number_input("Enter the x value", value=None, placeholder="Type a number...")
-       
-       
-       yvalue = st.number_input("Enter the y value", value=None, placeholder="Type a number...")
-       
-       
-       zvalue = st.number_input("Enter the z value", value=None, placeholder="Type a number...")
-       
-       
-       st.header(f"Enter the Rotation values for the Sensor")
-       
-       ptchValue = st.number_input("Enter the Pitch value", value=None, placeholder="Type a number...")
-       
-       
-       yawValue = st.number_input("Enter the Yaw value", value=None, placeholder="Type a number...")
-       
+
+st.header(f"Location of the Sensor")
+xvalue = st.number_input("Enter the x value", value=None, placeholder="Type a number...")
+
+
+yvalue = st.number_input("Enter the y value", value=None, placeholder="Type a number...")
+
+
+zvalue = st.number_input("Enter the z value", value=None, placeholder="Type a number...")
+
+
+st.header(f"Enter the Rotation values for the Sensor")
+
+ptchValue = st.number_input("Enter the Pitch value", value=None, placeholder="Type a number...")
+
+
+yawValue = st.number_input("Enter the Yaw value", value=None, placeholder="Type a number...")
+
        
