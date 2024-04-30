@@ -40,3 +40,4 @@ number = st.number_input("Enter the Pitch value", value=None, placeholder="Type 
 
 number = st.number_input("Enter the Yaw value", value=None, placeholder="Type a number...")
 
+st.selectbox('Select', [1,2,3])
