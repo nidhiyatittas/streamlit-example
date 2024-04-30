@@ -35,10 +35,10 @@ for i in range(SensorNumber):
     
     st.header(f"Enter the Rotation values for the Sensor {i+1}")
     
-    ptchValue = st.number_input("Enter the Pitch value {i+1}", value=None, placeholder="Type a number...", key=f"pitch_{i}")
+    ptchValue = st.number_input("Enter the Pitch value", value=None, placeholder="Type a number...", key=f"pitch_{i}")
     
     
-    yawValue = st.number_input("Enter the Yaw value {i+1}", value=None, placeholder="Type a number...", key=f"yaw_{i}")
+    yawValue = st.number_input("Enter the Yaw value", value=None, placeholder="Type a number...", key=f"yaw_{i}")
 
 
 
