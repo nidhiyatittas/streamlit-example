@@ -19,7 +19,7 @@ sensor = st.radio(
  ["Camera RGB","Camera Depth(Raw)"," Camera Depth (Gray Scale)"," Camera Depth (Logarithmic Gray Scale)","Camera Semantic Segmentation (Raw)","Camera Semantic Segmentation(CityScapes Palette)","Lidar (Ray-Cast)"])
 
 
-for i in range(1,SensorNumber):
+for i in range(0,SensorNumber):
 
        st.header(f"Location of the Sensor")
        number = st.number_input("Enter the x value", value=None, placeholder="Type a number...")
