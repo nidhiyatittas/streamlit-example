@@ -33,4 +33,10 @@ st.write('The y value is ', number)
 number = st.number_input("Enter the z value", value=None, placeholder="Type a number...")
 st.write('The z value is ', number)
 
+st.header(f"Enter the Rotation values for the Sensor")
 
+number = st.number_input("Enter the Pitch value", value=None, placeholder="Type a number...")
+st.write('The x value is ', number)
+
+number = st.number_input("Enter the Yaw value", value=None, placeholder="Type a number...")
+st.write('The y value is ', number)
