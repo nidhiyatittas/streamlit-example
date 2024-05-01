@@ -40,7 +40,7 @@ for i in range(SensorNumber):
     "Pick a Sensor ",
     ["Camera RGB","Camera Depth(Raw)"," Camera Depth (Gray Scale)"," Camera Depth (Logarithmic Gray Scale)","Camera Semantic Segmentation (Raw)","Camera Semantic Segmentation(CityScapes Palette)","Lidar (Ray-Cast)"],key=f"sensor_{i}")
     sensor_values.append(sensor_mapping[sensor])  # Map the sensor value to integer
-    
+    st.write("Selected sensor:", sensor)  # Add this line for debugging
     st.header(f"Location of Sensor {i+1}")
     xvalue = st.number_input("Enter the x value", value=None, placeholder="Type a number...", key=f"x_{i}")
     
