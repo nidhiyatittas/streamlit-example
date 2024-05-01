@@ -26,7 +26,26 @@ sensor_mapping = {
 }
 
 scenicBehavior = st.selectbox("Pick a SCENIC behavior", list(behavior_mapping.keys()))
-
+vehicleType = st.selectbox("Pick type of ego vehicle", [
+    "vehicle.audi.a2",
+    "vehicle.audi.etron",
+    "vehicle.audi.tt",
+    "vehicle.bmw.grandtourer",
+    "vehicle.chevrolet.impala",
+    "vehicle.citroen.c3",
+    "vehicle.dodge.charger_police",
+    "vehicle.jeep.wrangler_rubicon",
+    "vehicle.lincoln.mkz_2017",
+    "vehicle.mercedes.coupe",
+    "vehicle.mini.cooper_s",
+    "vehicle.ford.mustang",
+    "vehicle.nissan.micra",
+    "vehicle.nissan.patrol",
+    "vehicle.seat.leon",
+    "vehicle.tesla.model3",
+    "vehicle.toyota.prius",
+    "vehicle.volkswagen.t2",
+])
 sensor_values = []
 SensorNumber=st.selectbox("Number of sensors?", [1,2,3,4,5,6,7,8,9,10])
 
@@ -63,7 +82,7 @@ for i in range(SensorNumber):
 mapped_behavior = behavior_mapping[scenicBehavior]
 
 # Format the command
-command = f"python Scenic_behaviour\\generate_data.py D:\\Scenic\\Scenic_behaviour\\behaviours\\{mapped_behavior}.scenic vehicle.lincoln.mkz_2020 D:\\Scenic\\Scenic_behaviour\\output {saveFlag} "
+command = f"python Scenic_behaviour\\generate_data.py D:\\Scenic\\Scenic_behaviour\\behaviours\\{mapped_behavior}.scenic {vehicleType} D:\\Scenic\\Scenic_behaviour\\output {saveFlag} "
 
 for i, location in enumerate(sensor_locations, start=1):
     xvalue, yvalue, zvalue, pitchValue, yawValue = location
