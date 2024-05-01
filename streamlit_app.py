@@ -14,6 +14,17 @@ behavior_mapping = {
     "Ego waiting for the pedestrian while taking reverse behavior": "scene_egoWaiting_for_ped_while_moving_frontandback",
     "Pedestrian crossing before lane change behavior": "Scene_Pedestrian_crossing_before_lane_change"
 }
+# Mapping dictionary for sensors
+sensor_mapping = {
+    "Camera RGB": 0,
+    "Camera Depth(Raw)": 1,
+    "Camera Depth (Gray Scale)": 2,
+    "Camera Depth (Logarithmic Gray Scale)": 3,
+    "Camera Semantic Segmentation (Raw)": 4,
+    "Camera Semantic Segmentation(CityScapes Palette)": 5,
+    "Lidar (Ray-Cast)": 6
+}
+
 scenicBehavior = st.selectbox("Pick a SCENIC behavior", list(behavior_mapping.keys()))
 
 
@@ -28,6 +39,8 @@ for i in range(SensorNumber):
     sensor = st.radio(
     "Pick a Sensor ",
     ["Camera RGB","Camera Depth(Raw)"," Camera Depth (Gray Scale)"," Camera Depth (Logarithmic Gray Scale)","Camera Semantic Segmentation (Raw)","Camera Semantic Segmentation(CityScapes Palette)","Lidar (Ray-Cast)"],key=f"sensor_{i}")
+    sensor_values.append(sensor_mapping[sensor])  # Map the sensor value to integer
+    
     st.header(f"Location of Sensor {i+1}")
     xvalue = st.number_input("Enter the x value", value=None, placeholder="Type a number...", key=f"x_{i}")
     
@@ -49,7 +62,7 @@ for i in range(SensorNumber):
 # Get the mapped behavior
 mapped_behavior = behavior_mapping[scenicBehavior]
 # Format the command
-command = f"python Scenic_behaviour\\generate_data.py D:\\Scenic\\Scenic_behaviour\\behaviours\\{mapped_behavior}.scenic vehicle.lincoln.mkz_2020 D:\\Scenic\\Scenic_behaviour\\output {saveFlag} 0 0"
+command = f"python Scenic_behaviour\\generate_data.py D:\\Scenic\\Scenic_behaviour\\behaviours\\{mapped_behavior}.scenic vehicle.lincoln.mkz_2020 D:\\Scenic\\Scenic_behaviour\\output {saveFlag} 0 {sensor_values}"
 
 for i, location in enumerate(sensor_locations, start=1):
     xvalue, yvalue, zvalue, pitchValue, yawValue = location
