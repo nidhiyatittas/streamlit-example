@@ -20,7 +20,7 @@ sensor = st.radio(
 
 saveFlag = st.selectbox('Do you want to save generated data?', ["Yes","No"])
 
-
+sensor_locations = []
 for i in range(SensorNumber):
 
     st.header(f"Location of Sensor {i+1}")
@@ -39,7 +39,7 @@ for i in range(SensorNumber):
     
     
     yawValue = st.number_input("Enter the Yaw value", value=None, placeholder="Type a number...", key=f"yaw_{i}")
-
+    sensor_locations.append((xvalue, yvalue, zvalue, pitchValue, yawValue))
 # Format the command
 command = f"python Scenic_behaviour\\generate_data.py D:\\Scenic\\Scenic_behaviour\\behaviours\\{scenicBehavior}.scenic vehicle.lincoln.mkz_2020 D:\\Scenic\\Scenic_behaviour\\output {saveFlag} 0 0"
 
