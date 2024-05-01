@@ -68,8 +68,8 @@ command = f"python Scenic_behaviour\\generate_data.py D:\\Scenic\\Scenic_behavio
 for i, location in enumerate(sensor_locations, start=1):
     xvalue, yvalue, zvalue, pitchValue, yawValue = location
     sensor_value = sensor_values[i-1]  # Get sensor value for this iteration
-    transform_index = i
-    command += f" {transform_index}{sensor_value} {xvalue} {yvalue} {zvalue} {pitchValue} {yawValue}"
+    transform_index = i-1
+    command += f" {transform_index} {sensor_value} {xvalue} {yvalue} {zvalue} {pitchValue} {yawValue}"
 
 st.write(f"Generated Command: {command}")
 
