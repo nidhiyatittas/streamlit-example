@@ -18,7 +18,7 @@ sensor = st.radio(
  "Pick a Sensor",
  ["Camera RGB","Camera Depth(Raw)"," Camera Depth (Gray Scale)"," Camera Depth (Logarithmic Gray Scale)","Camera Semantic Segmentation (Raw)","Camera Semantic Segmentation(CityScapes Palette)","Lidar (Ray-Cast)"])
 
-st.selectbox('Do you want to save generated data?', ["Yes","No"])
+saveFlag = st.selectbox('Do you want to save generated data?', ["Yes","No"])
 
 
 for i in range(SensorNumber):
@@ -35,10 +35,18 @@ for i in range(SensorNumber):
     
     st.header(f"Enter the Rotation values for the Sensor {i+1}")
     
-    ptchValue = st.number_input("Enter the Pitch value", value=None, placeholder="Type a number...", key=f"pitch_{i}")
+    pitchValue = st.number_input("Enter the Pitch value", value=None, placeholder="Type a number...", key=f"pitch_{i}")
     
     
     yawValue = st.number_input("Enter the Yaw value", value=None, placeholder="Type a number...", key=f"yaw_{i}")
 
+# Format the command
+command = f"python Scenic_behaviour\\generate_data.py D:\\Scenic\\Scenic_behaviour\\behaviours\\{scenicBehavior}.scenic vehicle.lincoln.mkz_2020 D:\\Scenic\\Scenic_behaviour\\output {saveFlag} 0 0"
+
+for i, location in enumerate(sensor_locations, start=1):
+    xvalue, yvalue, zvalue, pitchValue, yawValue = location
+    command += f" {xvalue} {yvalue} {zvalue} {pitchValue} {yawValue}"
+
+st.write(f"Generated Command: {command}")
 
 
