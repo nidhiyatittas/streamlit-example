@@ -27,7 +27,7 @@ sensor_mapping = {
 
 scenicBehavior = st.selectbox("Pick a SCENIC behavior", list(behavior_mapping.keys()))
 
-
+sensor_values = []
 SensorNumber=st.selectbox("Number of sensors?", [1,2,3,4,5,6,7,8,9,10])
 
 
