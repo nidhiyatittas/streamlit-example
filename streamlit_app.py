@@ -12,7 +12,8 @@ SensorNumber=st.selectbox("Number of sensors?", [1,2,3,4,5,6,7,8,9,10])
 
 
 saveFlag = st.selectbox('Do you want to save generated data?', ["Yes","No"])
-
+# Map 'Yes' to 'y' and 'No' to 'n'
+saveFlag = 'y' if saveFlag == 'Yes' else 'n'
 sensor_locations = []
 for i in range(SensorNumber):
     sensor = st.radio(
