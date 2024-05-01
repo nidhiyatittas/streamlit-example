@@ -40,7 +40,7 @@ for i in range(SensorNumber):
     "Pick a Sensor ",
     list(sensor_mapping.keys()),key=f"sensor_{i}")
     sensor_values.append(sensor_mapping[sensor])  # Map the sensor value to integer
-    st.write("Selected sensor:", sensor)  # Add this line for debugging
+    
     st.header(f"Location of Sensor {i+1}")
     xvalue = st.number_input("Enter the x value", value=None, placeholder="Type a number...", key=f"x_{i}")
     
@@ -61,13 +61,14 @@ for i in range(SensorNumber):
 
 # Get the mapped behavior
 mapped_behavior = behavior_mapping[scenicBehavior]
-sensor_values_str = " ".join(map(str, sensor_values))
+
 # Format the command
-command = f"python Scenic_behaviour\\generate_data.py D:\\Scenic\\Scenic_behaviour\\behaviours\\{mapped_behavior}.scenic vehicle.lincoln.mkz_2020 D:\\Scenic\\Scenic_behaviour\\output {saveFlag} 0 {sensor_values_str}"
+command = f"python Scenic_behaviour\\generate_data.py D:\\Scenic\\Scenic_behaviour\\behaviours\\{mapped_behavior}.scenic vehicle.lincoln.mkz_2020 D:\\Scenic\\Scenic_behaviour\\output {saveFlag} 0 "
 
 for i, location in enumerate(sensor_locations, start=1):
     xvalue, yvalue, zvalue, pitchValue, yawValue = location
-    command += f" {xvalue} {yvalue} {zvalue} {pitchValue} {yawValue}"
+    sensor_value = sensor_values[i-1]  # Get sensor value for this iteration
+    command += f" {sensor_value}{xvalue} {yvalue} {zvalue} {pitchValue} {yawValue}"
 
 st.write(f"Generated Command: {command}")
 
