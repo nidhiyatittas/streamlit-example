@@ -61,8 +61,9 @@ for i in range(SensorNumber):
 
 # Get the mapped behavior
 mapped_behavior = behavior_mapping[scenicBehavior]
+sensor_values_str = " ".join(map(str, sensor_values))
 # Format the command
-command = f"python Scenic_behaviour\\generate_data.py D:\\Scenic\\Scenic_behaviour\\behaviours\\{mapped_behavior}.scenic vehicle.lincoln.mkz_2020 D:\\Scenic\\Scenic_behaviour\\output {saveFlag} 0 {sensor_values}"
+command = f"python Scenic_behaviour\\generate_data.py D:\\Scenic\\Scenic_behaviour\\behaviours\\{mapped_behavior}.scenic vehicle.lincoln.mkz_2020 D:\\Scenic\\Scenic_behaviour\\output {saveFlag} 0 {sensor_values_str}"
 
 for i, location in enumerate(sensor_locations, start=1):
     xvalue, yvalue, zvalue, pitchValue, yawValue = location
