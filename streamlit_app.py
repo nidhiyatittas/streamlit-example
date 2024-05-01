@@ -45,6 +45,9 @@ for i in range(SensorNumber):
     
     yawValue = st.number_input("Enter the Yaw value", value=None, placeholder="Type a number...", key=f"yaw_{i}")
     sensor_locations.append((xvalue, yvalue, zvalue, pitchValue, yawValue))
+
+# Get the mapped behavior
+mapped_behavior = behavior_mapping[scenicBehavior]
 # Format the command
 command = f"python Scenic_behaviour\\generate_data.py D:\\Scenic\\Scenic_behaviour\\behaviours\\{mapped_behavior}.scenic vehicle.lincoln.mkz_2020 D:\\Scenic\\Scenic_behaviour\\output {saveFlag} 0 0"
 
