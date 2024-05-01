@@ -5,8 +5,17 @@ import streamlit as st
 
 st.write("""
 # Multi sensor Synthetic data generation using Carla and Scenic """)
+# Mapping dictionary for behaviors
+behavior_mapping = {
+    "Ego lane changing behavior": "Lane_Change_behavior_with_brake",
+    "Ego accelerating backward behavior": "accelerate_backward",
+    "Pedestrian walking through the sidewalk as ego passes behavior": "pedestrian_on_side",
+    "Ego applies breaks when pedestrian crosses the road behavior": "PedestrianCrossingBehaviour",
+    "Ego waiting for the pedestrian while taking reverse behavior": "scene_egoWaiting_for_ped_while_moving_frontandback",
+    "Pedestrian crossing before lane change behavior": "Scene_Pedestrian_crossing_before_lane_change"
+}
+scenicBehavior = st.selectbox("Pick a SCENIC behavior", list(behavior_mapping.keys()))
 
-scenicBehavior = st.selectbox("Pick a SCENIC behavior", ["Ego lane changing behavior", "Pedestrian walking through the sidewalk as ego passes behavior", "Ego applies breaks when pedestrian crosses the road behavior","Ego waiting for the pedestrian while taking reverse behavior","Pedestrian crossing before lane change behavior","Ego Accelerating backward behaviour"])
 
 SensorNumber=st.selectbox("Number of sensors?", [1,2,3,4,5,6,7,8,9,10])
 
