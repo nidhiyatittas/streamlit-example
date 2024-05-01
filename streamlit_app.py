@@ -16,7 +16,7 @@ saveFlag = st.selectbox('Do you want to save generated data?', ["Yes","No"])
 sensor_locations = []
 for i in range(SensorNumber):
     sensor = st.radio(
-    "Pick a Sensor {i+1}",
+    "Pick a Sensor ",
     ["Camera RGB","Camera Depth(Raw)"," Camera Depth (Gray Scale)"," Camera Depth (Logarithmic Gray Scale)","Camera Semantic Segmentation (Raw)","Camera Semantic Segmentation(CityScapes Palette)","Lidar (Ray-Cast)"],key=f"sensor_{i}")
     st.header(f"Location of Sensor {i+1}")
     xvalue = st.number_input("Enter the x value", value=None, placeholder="Type a number...", key=f"x_{i}")
