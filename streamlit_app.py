@@ -38,8 +38,7 @@ with col1:
     st.write(" ")
     st.write(" ")
     st.write(" ")
-    scenicBehavior = st.radio(
-        st.subheader("Pick a SCENIC behavior"),
+    scenicBehavior = st.radio("Pick a SCENIC behavior",
         list(behavior_mapping.keys()))  
 
     if (scenicBehavior == "Ego waiting for the pedestrian while taking reverse behavior"):
