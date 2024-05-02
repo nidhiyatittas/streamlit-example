@@ -44,7 +44,7 @@ with col1:
     if (scenicBehavior == "Ego waiting for the pedestrian while taking reverse behavior"):
         with col2:    
             render_image("Ego_waiting_for_pedestrian_on_reverse.jpg")
-    else if (scenicBehavior == "Pedestrian crossing before lane change behavior"):
+    elif(scenicBehavior == "Pedestrian crossing before lane change behavior"):
         with col2:    
             render_image("Pedestrian_crossing_before_lane_change.jpg")
 vehicleType = st.selectbox("Pick type of ego vehicle", [
