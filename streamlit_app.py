@@ -87,20 +87,20 @@ with col1:
         ])
 if (vehicleType == "vehicle.audi.a2"):
         with col2:
-            render_image("chevrolet_impala.jpg")
+            render_image("audi_a2.jpg")
 elif (vehicleType == "vehicle.audi.etron"):
         with col2:
             render_image("audi_etron.jpg")
 elif (vehicleType == "vehicle.audi.tt"):
         with col2:
             render_image("audi_tt.jpg")
-elif (vehicleType == "vehicle.bmw.grandtourer.a2"):
+elif (vehicleType == "vehicle.bmw.grandtourer"):
         with col2:
             render_image("bmw_grandtourer.jpg")
-elif (vehicleType == "vehicle.chevrolet.impala.a2"):
+elif (vehicleType == "vehicle.chevrolet.impala"):
         with col2:
             render_image("chevrolet_impala.jpg")
-elif (vehicleType == "vehicle.citroen.c3.a2"):
+elif (vehicleType == "vehicle.citroen.c3"):
         with col2:
             render_image("citroen_c3.jpg")
 sensor_values = []
