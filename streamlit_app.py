@@ -4,7 +4,7 @@ import pandas as pd
 import streamlit as st
 from image_loader import render_image
 
-
+st.set_page_config(layout="wide")
 #render_image("Pedestrian_crossing_before_lane_change.jpg")
 st.write("""
 # Multi sensor Synthetic data generation using Carla and Scenic """)
