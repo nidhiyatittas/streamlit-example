@@ -87,7 +87,7 @@ with col1:
         ])
 if (vehicleType == "vehicle.audi.a2"):
         with col2:
-            render_image("PedestrianCrossingBehavior.jpg")
+            render_image("audi_a2.jpg")
 sensor_values = []
 SensorNumber=st.selectbox("Number of sensors?", [1,2,3,4,5,6,7,8,9,10])
 
