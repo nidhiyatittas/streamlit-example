@@ -33,7 +33,7 @@ sensor_mapping = {
 }
 
 scenicBehavior = st.selectbox("Pick a SCENIC behavior", list(behavior_mapping.keys()))
-if (scenicBehavior == "Ego waiting for the pedestrian while taking reverse behavior")
+if (scenicBehavior == "Ego waiting for the pedestrian while taking reverse behavior"):
     render_image("Ego_waiting_for_pedestrian_on_reverse.jpg")
 vehicleType = st.selectbox("Pick type of ego vehicle", [
     "vehicle.audi.a2",
