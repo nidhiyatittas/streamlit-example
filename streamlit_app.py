@@ -31,10 +31,9 @@ sensor_mapping = {
     "Camera Semantic Segmentation(CityScapes Palette)": 5,
     "Lidar (Ray-Cast)": 6
 }
-col1, col2 = st.columns(2)
-with col1:
+
     
-    scenicBehavior = st.selectbox("Pick a SCENIC behavior", list(behavior_mapping.keys()))
+scenicBehavior = st.selectbox("Pick a SCENIC behavior", list(behavior_mapping.keys()))
 if (scenicBehavior == "Ego waiting for the pedestrian while taking reverse behavior"):
     col1, col2 = st.columns(2)
     
