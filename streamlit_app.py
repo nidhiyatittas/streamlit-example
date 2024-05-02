@@ -34,8 +34,8 @@ sensor_mapping = {
 col1, col2 = st.columns(2)
 with col1:  
     st.write(" ")
-    t.write(" ")
-    t.write(" ")
+    st.write(" ")
+    st.write(" ")
     scenicBehavior = st.radio(
         "Pick a SCENIC behavior",
         list(behavior_mapping.keys()))  
