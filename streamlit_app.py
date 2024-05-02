@@ -36,6 +36,8 @@ with col1:
     st.write(" ")
     st.write(" ")
     st.write(" ")
+    st.write(" ")
+    st.write(" ")
     scenicBehavior = st.radio(
         "Pick a SCENIC behavior",
         list(behavior_mapping.keys()))  
