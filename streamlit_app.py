@@ -50,6 +50,18 @@ with col1:
     elif(scenicBehavior == "Ego applies breaks when pedestrian crosses the road behavior"):
         with col2:    
             render_image("PedestrianCrossingBehavior.jpg")
+    elif(scenicBehavior == "Pedestrian walking through the sidewalk as ego passes behavior"):
+        with col2:    
+            render_image("PedestrianOnSide.jpg")
+    elif(scenicBehavior == "Pedestrian walking through the sidewalk as ego passes behavior"):
+        with col2:    
+            render_image("PedestrianOnSide.jpg")
+    elif(scenicBehavior == "Ego accelerating backward behavior"):
+        with col2:    
+            render_image("AccelerateBackwards.jpg")
+    elif(scenicBehavior == "Ego accelerating backward behavior"):
+        with col2:    
+            render_image("AccelerateBackwards.jpg")
 vehicleType = st.selectbox("Pick type of ego vehicle", [
     "vehicle.audi.a2",
     "vehicle.audi.etron",
