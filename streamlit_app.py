@@ -87,7 +87,7 @@ with col1:
         ])
 if (vehicleType == "vehicle.audi.a2"):
         with col2:
-            render_image("audi_a2.jpg")
+            render_image("audi_etron.jpg")
 elif (vehicleType == "vehicle.audi_etron"):
         with col2:
             render_image("audi_etron.jpg")
