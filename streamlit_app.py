@@ -63,6 +63,10 @@ with col1:
     elif(scenicBehavior == "Ego lane changing behavior"):
         with col2:    
             render_image("LaneChaneWithBreak.jpg")
+
+    
+
+
 col1, col2 = st.columns(2)
 with col1:  
         vehicleType = st.selectbox("Pick type of ego vehicle", [
@@ -103,6 +107,34 @@ elif (vehicleType == "vehicle.chevrolet.impala"):
 elif (vehicleType == "vehicle.citroen.c3"):
         with col2:
             render_image("citroen_c3.jpg")
+
+elif (vehicleType == "vehicle.citroen.c3"):
+        with col2:
+            render_image("citroen_c3.jpg")
+
+elif (vehicleType == "vehicle.dodge.charger_police"):
+        with col2:
+            render_image("dodge_charger_police.jpg")
+
+elif (vehicleType == "vehicle.jeep.wrangler_rubicon"):
+        with col2:
+            render_image("jeep_wrangler_rubicon.jpg")
+
+elif (vehicleType == "vehicle.lincoln.mkz_2017"):
+        with col2:
+            render_image("lincoln_mkz_2017.jpg")
+
+elif (vehicleType == "vehicle.mercedes.coupe"):
+        with col2:
+            render_image("mercedes_coupe.jpg")
+
+elif (vehicleType == "vehicle.mini.cooper_s"):
+        with col2:
+            render_image("mini_cooper_s.jpg")
+
+elif (vehicleType == "vehicle.ford.mustang"):
+        with col2:
+            render_image("ford_mustang.jpg")
 sensor_values = []
 SensorNumber=st.selectbox("Number of sensors?", [1,2,3,4,5,6,7,8,9,10])
 
