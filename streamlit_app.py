@@ -63,26 +63,31 @@ with col1:
     elif(scenicBehavior == "Ego lane changing behavior"):
         with col2:    
             render_image("LaneChaneWithBreak.jpg")
-vehicleType = st.selectbox("Pick type of ego vehicle", [
-    "vehicle.audi.a2",
-    "vehicle.audi.etron",
-    "vehicle.audi.tt",
-    "vehicle.bmw.grandtourer",
-    "vehicle.chevrolet.impala",
-    "vehicle.citroen.c3",
-    "vehicle.dodge.charger_police",
-    "vehicle.jeep.wrangler_rubicon",
-    "vehicle.lincoln.mkz_2017",
-    "vehicle.mercedes.coupe",
-    "vehicle.mini.cooper_s",
-    "vehicle.ford.mustang",
-    "vehicle.nissan.micra",
-    "vehicle.nissan.patrol",
-    "vehicle.seat.leon",
-    "vehicle.tesla.model3",
-    "vehicle.toyota.prius",
-    "vehicle.volkswagen.t2",
-])
+col1, col2 = st.columns(2)
+with col1:  
+        vehicleType = st.selectbox("Pick type of ego vehicle", [
+            "vehicle.audi.a2",
+            "vehicle.audi.etron",
+            "vehicle.audi.tt",
+            "vehicle.bmw.grandtourer",
+            "vehicle.chevrolet.impala",
+            "vehicle.citroen.c3",
+            "vehicle.dodge.charger_police",
+            "vehicle.jeep.wrangler_rubicon",
+            "vehicle.lincoln.mkz_2017",
+            "vehicle.mercedes.coupe",
+            "vehicle.mini.cooper_s",
+            "vehicle.ford.mustang",
+            "vehicle.nissan.micra",
+            "vehicle.nissan.patrol",
+            "vehicle.seat.leon",
+            "vehicle.tesla.model3",
+            "vehicle.toyota.prius",
+            "vehicle.volkswagen.t2",
+        ])
+if (vehicleType == "vehicle.audi.a2"):
+        with col2:
+            render_image("PedestrianCrossingBehavior.jpg")
 sensor_values = []
 SensorNumber=st.selectbox("Number of sensors?", [1,2,3,4,5,6,7,8,9,10])
 
