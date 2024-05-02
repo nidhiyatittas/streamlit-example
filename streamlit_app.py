@@ -2,13 +2,15 @@ import altair as alt
 import numpy as np
 import pandas as pd
 import streamlit as st
-
+from image_loader import render_image
 
 
 st.write("""
 # Multi sensor Synthetic data generation using Carla and Scenic """)
 
-st.image("image1.jpg", caption='Sunrise by the mountains')
+
+
+render_image("image1.jpg")
 # Mapping dictionary for behaviors
 behavior_mapping = {
     "Ego lane changing behavior": "Lane_Change_behavior_with_brake",
