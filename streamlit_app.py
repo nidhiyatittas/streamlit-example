@@ -47,6 +47,9 @@ with col1:
     elif(scenicBehavior == "Pedestrian crossing before lane change behavior"):
         with col2:    
             render_image("Pedestrian_crossing_before_lane_change.jpg")
+    elif(scenicBehavior == "Ego applies breaks when pedestrian crosses the road behavior"):
+        with col2:    
+            render_image("PedestrianCrossingBehavior.jpg")
 vehicleType = st.selectbox("Pick type of ego vehicle", [
     "vehicle.audi.a2",
     "vehicle.audi.etron",
