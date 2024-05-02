@@ -135,6 +135,30 @@ elif (vehicleType == "vehicle.mini.cooper_s"):
 elif (vehicleType == "vehicle.ford.mustang"):
         with col2:
             render_image("ford_mustang.jpg")
+
+elif (vehicleType == "vehicle.nissan.micra"):
+        with col2:
+            render_image("nissan_micra.jpg")
+
+elif (vehicleType == "vehicle.nissan.patrol"):
+        with col2:
+            render_image("nissan_patrol.jpg")
+
+elif (vehicleType == "vehicle.seat.leon"):
+        with col2:
+            render_image("seat_leon.jpg")
+
+elif (vehicleType == "vehicle.tesla.model3"):
+        with col2:
+            render_image("tesla_model3.jpg")
+
+elif (vehicleType == "vehicle.toyota.prius"):
+        with col2:
+            render_image("toyota_prius.jpg")
+
+elif (vehicleType == "vehicle.volkswagen.t2"):
+        with col2:
+            render_image("volkswagen_t2.jpg")
 sensor_values = []
 SensorNumber=st.selectbox("Number of sensors?", [1,2,3,4,5,6,7,8,9,10])
 
