@@ -34,7 +34,7 @@ sensor_mapping = {
 
 scenicBehaviore = st.radio(
     "Pick a SCENIC behavior",
-    list(behavior_mapping.keys())  
+    list(behavior_mapping.keys()))  
 scenicBehavior = st.selectbox("Pick a SCENIC behavior", list(behavior_mapping.keys()))
 if (scenicBehavior == "Ego waiting for the pedestrian while taking reverse behavior"):
     col1, col2 = st.columns(2)
