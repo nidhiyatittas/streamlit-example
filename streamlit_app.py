@@ -42,7 +42,8 @@ with col1:
         list(behavior_mapping.keys()))  
 
     if (scenicBehavior == "Ego waiting for the pedestrian while taking reverse behavior"):
-        with col2:    
+        with col2:
+            st.subheader("2D MAP of selected behavior")
             render_image("Ego_waiting_for_pedestrian_on_reverse.jpg")
     elif(scenicBehavior == "Pedestrian crossing before lane change behavior"):
         with col2:    
