@@ -59,9 +59,9 @@ with col1:
     elif(scenicBehavior == "Ego accelerating backward behavior"):
         with col2:    
             render_image("AccelerateBackwards.jpg")
-    elif(scenicBehavior == "Ego accelerating backward behavior"):
+    elif(scenicBehavior == "Ego lane changing behavior"):
         with col2:    
-            render_image("AccelerateBackwards.jpg")
+            render_image("LaneChaneWithBreak.jpg")
 vehicleType = st.selectbox("Pick type of ego vehicle", [
     "vehicle.audi.a2",
     "vehicle.audi.etron",
