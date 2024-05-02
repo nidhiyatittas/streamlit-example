@@ -3,7 +3,8 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 from image_loader import render_image
-render_image("image1.jpg")
+render_image("from image_loader import render_image
+render_image("Ego_waiting_for_pedestrian_on_reverse.jpg")
 
 st.write("""
 # Multi sensor Synthetic data generation using Carla and Scenic """)
