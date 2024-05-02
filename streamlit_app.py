@@ -3,14 +3,14 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 from image_loader import render_image
-
+render_image("image1.jpg")
 
 st.write("""
 # Multi sensor Synthetic data generation using Carla and Scenic """)
 
 
 
-render_image("image1.jpg")
+
 # Mapping dictionary for behaviors
 behavior_mapping = {
     "Ego lane changing behavior": "Lane_Change_behavior_with_brake",
