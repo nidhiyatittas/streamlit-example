@@ -6,7 +6,7 @@ import streamlit as st
 st.write("""
 # Multi sensor Synthetic data generation using Carla and Scenic """)
 
-st.image('Ego_waiting_for_pedestrian_on_reverse.png', caption='Sunrise by the mountains')
+st.image('Ego_waiting_for_pedestrian_on_reverse.jpg', caption='Sunrise by the mountains')
 # Mapping dictionary for behaviors
 behavior_mapping = {
     "Ego lane changing behavior": "Lane_Change_behavior_with_brake",
