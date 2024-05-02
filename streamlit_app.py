@@ -88,6 +88,21 @@ with col1:
 if (vehicleType == "vehicle.audi.a2"):
         with col2:
             render_image("audi_a2.jpg")
+elif (vehicleType == "audi_etron"):
+        with col2:
+            render_image("audi_etron.jpg")
+elif (vehicleType == "audi_tt"):
+        with col2:
+            render_image("audi_tt.jpg")
+elif (vehicleType == "bmw_grandtourer.a2"):
+        with col2:
+            render_image("bmw_grandtourer.jpg")
+elif (vehicleType == "chevrolet_impala.a2"):
+        with col2:
+            render_image("chevrolet_impala.jpg")
+elif (vehicleType == "citroen_c3.a2"):
+        with col2:
+            render_image("citroen_c3.jpg")
 sensor_values = []
 SensorNumber=st.selectbox("Number of sensors?", [1,2,3,4,5,6,7,8,9,10])
 
