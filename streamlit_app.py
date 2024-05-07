@@ -159,13 +159,14 @@ elif (vehicleType == "vehicle.toyota.prius"):
 elif (vehicleType == "vehicle.volkswagen.t2"):
         with col2:
             render_image("volkswagen_t2.jpg")
+saveFlag = st.selectbox('Do you want to save Generated data and Annotations?', ["Yes","No"])
+# Map 'Yes' to 'y' and 'No' to 'n'
+saveFlag = 'y' if saveFlag == 'Yes' else 'n'
 sensor_values = []
 SensorNumber=st.selectbox("Number of sensors?", [1,2,3,4,5,6,7,8,9,10])
 
 
-saveFlag = st.selectbox('Do you want to save generated data?', ["Yes","No"])
-# Map 'Yes' to 'y' and 'No' to 'n'
-saveFlag = 'y' if saveFlag == 'Yes' else 'n'
+
 sensor_locations = []
 for i in range(SensorNumber):
     sensor = st.radio(
