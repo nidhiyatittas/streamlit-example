@@ -183,7 +183,7 @@ for i in range(SensorNumber):
     st.header(f"Location of Sensor {i+1}")
     if (view == "Top View"):
        xvalue = st.number_input("Enter the x value", value=0, placeholder="Type a number...", key=f"x_{i}")
-    else
+    else:
        xvalue = st.number_input("Enter the x value", value=None, placeholder="Type a number...", key=f"x_{i}")
     
     
