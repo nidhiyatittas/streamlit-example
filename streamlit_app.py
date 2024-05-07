@@ -183,14 +183,12 @@ for i in range(SensorNumber):
     st.header(f"Location of Sensor {i+1}")
     if (view == "Top View"):
        xvalue = st.number_input("Enter the x value", value=0, placeholder="Type a number...", key=f"x_{i}")
+       yvalue = st.number_input("Enter the y value", value=0, placeholder="Type a number...", key=f"y_{i}") 
+       zvalue = st.number_input("Enter the z value", value=5, placeholder="Type a number...", key=f"z_{i}")
     else:
        xvalue = st.number_input("Enter the x value", value=None, placeholder="Type a number...", key=f"x_{i}")
-    
-    
-    yvalue = st.number_input("Enter the y value", value=None, placeholder="Type a number...", key=f"y_{i}")
-    
-    
-    zvalue = st.number_input("Enter the z value", value=None, placeholder="Type a number...", key=f"z_{i}")
+       yvalue = st.number_input("Enter the y value", value=None, placeholder="Type a number...", key=f"y_{i}")
+       zvalue = st.number_input("Enter the z value", value=None, placeholder="Type a number...", key=f"z_{i}")
     
     
     st.header(f"Enter the Rotation values for the Sensor {i+1}")
