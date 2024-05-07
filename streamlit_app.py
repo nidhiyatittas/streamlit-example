@@ -193,30 +193,39 @@ for i in range(SensorNumber):
            render_image("TopView.jpg")
 
     elif (view == "Right side view"):
+      with col2:  
        xvalue = 0
        yvalue = 4 
        zvalue = 2.5
        pitchValue = -15
        yawValue = -90
+       render_image("RightView.jpg")
     elif (view == "Left side View"):
+     with col2:
        xvalue = 0
        yvalue = -4
        zvalue = 2.5
        pitchValue = -15
        yawValue = 90
+       render_image("LeftView.jpg")
     elif (view == "Front View"):
+     with col2:
        xvalue = 6
        yvalue = 0
        zvalue = 2.5
        pitchValue = -15
        yawValue = 180
+       render_image("FrontView.jpg")
     elif (view == "Rear View"):
+     with col2:
        xvalue = -6
        yvalue = 0
        zvalue = 2.5
        pitchValue = -15
        yawValue = 0
+       render_image("RearView.jpg")
     elif (view =="Custom View"):
+     
        st.header(f"Location of Sensor {i+1}")
        xvalue = st.number_input("Enter the x value", value=None, placeholder="Type a number...", key=f"x_{i}")
        yvalue = st.number_input("Enter the y value", value=None, placeholder="Type a number...", key=f"y_{i}")
