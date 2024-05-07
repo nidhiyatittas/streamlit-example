@@ -188,6 +188,13 @@ for i in range(SensorNumber):
        st.header(f"Rotation values for the Sensor {i+1}")
        pitchValue = st.number_input("Enter the Pitch value", value=-90, placeholder="Type a number...", key=f"pitch_{i}")
        yawValue = st.number_input("Enter the Yaw value", value=0, placeholder="Type a number...", key=f"yaw_{i}")
+    elif (view == "Front View"):
+       xvalue = st.number_input("Enter the x value", value=6, placeholder="Type a number...", key=f"x_{i}")
+       yvalue = st.number_input("Enter the y value", value=0, placeholder="Type a number...", key=f"y_{i}") 
+       zvalue = st.number_input("Enter the z value", value=2.5, placeholder="Type a number...", key=f"z_{i}")
+       st.header(f"Rotation values for the Sensor {i+1}")
+       pitchValue = st.number_input("Enter the Pitch value", value=-15, placeholder="Type a number...", key=f"pitch_{i}")
+       yawValue = st.number_input("Enter the Yaw value", value=180, placeholder="Type a number...", key=f"yaw_{i}")
     elif (view == "Rear View"):
        xvalue = st.number_input("Enter the x value", value=-6, placeholder="Type a number...", key=f"x_{i}")
        yvalue = st.number_input("Enter the y value", value=0, placeholder="Type a number...", key=f"y_{i}") 
