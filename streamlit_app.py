@@ -190,6 +190,7 @@ for i in range(SensorNumber):
            zvalue = 5
            pitchValue = -90
            yawValue = 0
+           render_image("TopView.jpg")
 
     elif (view == "Right side view"):
        xvalue = 0
