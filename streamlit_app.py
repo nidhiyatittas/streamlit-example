@@ -173,20 +173,23 @@ for i in range(SensorNumber):
     "Pick a Sensor ",
     list(sensor_mapping.keys()),key=f"sensor_{i}")
     sensor_values.append(sensor_mapping[sensor])  # Map the sensor value to integer
-    view = st.selectbox("Pick a view", [
-            "Top View",
-            "Right side view",
-            "Left side View",
-            "Front View",
-            "Rear View",
-            "Custom View"],key=f"view_{i}")
+    col1, col2 = st.columns(2)
+    with col1:  
+        view = st.selectbox("Pick a view", [
+                "Top View",
+                "Right side view",
+                "Left side View",
+                "Front View",
+                "Rear View",
+                "Custom View"],key=f"view_{i}")
     
     if (view == "Top View"):
-       xvalue = 0
-       yvalue = 0
-       zvalue = 5
-       pitchValue = -90
-       yawValue = 0
+        with col2:
+           xvalue = 0
+           yvalue = 0
+           zvalue = 5
+           pitchValue = -90
+           yawValue = 0
 
     elif (view == "Right side view"):
        xvalue = 0
