@@ -179,7 +179,7 @@ for i in range(SensorNumber):
             "Left side View",
             "Front View",
             "Rear View",
-            "Custom View"])
+            "Custom View"],key=f"view_{i}")
     st.header(f"Location of Sensor {i+1}")
     xvalue = st.number_input("Enter the x value", value=None, placeholder="Type a number...", key=f"x_{i}")
     
