@@ -178,8 +178,7 @@ for i in range(SensorNumber):
             "Right side view",
             "Left side View",
             "Front View",
-            "Rear View",
-            "Custom View"],key=f"view_{i}")
+            "Rear View",key=f"view_{i}")
     st.header(f"Location of Sensor {i+1}")
     if (view == "Top View"):
        xvalue = st.number_input("Enter the x value", value=0, placeholder="Type a number...", key=f"x_{i}")
@@ -216,13 +215,7 @@ for i in range(SensorNumber):
        st.header(f"Rotation values for the Sensor {i+1}")
        pitchValue = st.number_input("Enter the Pitch value", value=-15, placeholder="Type a number...", key=f"pitch_{i}")
        yawValue = st.number_input("Enter the Yaw value", value=0, placeholder="Type a number...", key=f"yaw_{i}")
-    elif (view =="Custom View"):
-       xvalue = st.number_input("Enter the x value", value=None, placeholder="Type a number...", key=f"x_{i}")
-       yvalue = st.number_input("Enter the y value", value=None, placeholder="Type a number...", key=f"y_{i}")
-       zvalue = st.number_input("Enter the z value", value=None, placeholder="Type a number...", key=f"z_{i}")
-       st.header(f"Rotation values for the Sensor {i+1}")
-       pitchValue = st.number_input("Enter the Pitch value", value=None, placeholder="Type a number...", key=f"pitch_{i}")
-       yawValue = st.number_input("Enter the Yaw value", value=None, placeholder="Type a number...", key=f"yaw_{i}")
+    
     
     
     sensor_locations.append((xvalue, yvalue, zvalue, pitchValue, yawValue))
