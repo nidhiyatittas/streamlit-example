@@ -239,23 +239,17 @@ for i in range(SensorNumber):
        x = [xvalue]
        y = [yvalue]
        z = [zvalue]
-        
-        # Plot ego position
-        ego_x = 0
-        ego_y = 0
-        ego_z = 0  # Assuming same z-coordinate as camera positions
-        
-        
-        # Plotly 3D Plot
-        fig = px.scatter_3d(x=x, y=y, z=z)
-        fig.add_scatter3d(x=[ego_x], y=[ego_y], z=[ego_z], mode='markers', marker=dict(color='red', size=10), name='Ego Position')
-        fig.update_layout(scene=dict(aspectmode="cube"))
-        fig.update_layout(scene=dict(xaxis_title='X Label', yaxis_title='Y Label', zaxis_title='Z Label'))
-        fig.update_layout(title='Sensor Position with respect to ego')
-        fig.show()
-        
-        # Show the plots
-        plt.show()
+       ego_x = 0
+       ego_y = 0
+       ego_z = 0  
+       # Plotly 3D Plot
+       fig = px.scatter_3d(x=x, y=y, z=z)
+       fig.add_scatter3d(x=[ego_x], y=[ego_y], z=[ego_z], mode='markers', marker=dict(color='red', size=10), name='Ego Position')
+       fig.update_layout(scene=dict(aspectmode="cube"))
+       fig.update_layout(scene=dict(xaxis_title='X Label', yaxis_title='Y Label', zaxis_title='Z Label'))
+       fig.update_layout(title='Sensor Position with respect to ego')
+       fig.show()
+       plt.show()
 
     
     sensor_locations.append((xvalue, yvalue, zvalue, pitchValue, yawValue))
