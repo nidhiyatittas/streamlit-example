@@ -3,6 +3,9 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 from image_loader import render_image
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+import plotly.express as px
 
 st.set_page_config(layout="wide")
 #render_image("Pedestrian_crossing_before_lane_change.jpg")
@@ -233,8 +236,27 @@ for i in range(SensorNumber):
        st.header(f"Rotation values for the Sensor {i+1}")
        pitchValue = st.number_input("Enter the Pitch value", value=None, placeholder="Type a number...", key=f"pitch_{i}")
        yawValue = st.number_input("Enter the Yaw value", value=None, placeholder="Type a number...", key=f"yaw_{i}")
-    
-    
+       x = [xvalue]
+       y = [yvalue]
+       z = [zvalue]
+        
+        # Plot ego position
+        ego_x = 0
+        ego_y = 0
+        ego_z = 0  # Assuming same z-coordinate as camera positions
+        
+        
+        # Plotly 3D Plot
+        fig = px.scatter_3d(x=x, y=y, z=z)
+        fig.add_scatter3d(x=[ego_x], y=[ego_y], z=[ego_z], mode='markers', marker=dict(color='red', size=10), name='Ego Position')
+        fig.update_layout(scene=dict(aspectmode="cube"))
+        fig.update_layout(scene=dict(xaxis_title='X Label', yaxis_title='Y Label', zaxis_title='Z Label'))
+        fig.update_layout(title='Sensor Position with respect to ego')
+        fig.show()
+        
+        # Show the plots
+        plt.show()
+
     
     sensor_locations.append((xvalue, yvalue, zvalue, pitchValue, yawValue))
 
