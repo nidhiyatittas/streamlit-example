@@ -2,8 +2,9 @@ import altair as alt
 import numpy as np
 import pandas as pd
 import streamlit as st
-from image_loader import render_image
 import matplotlib.pyplot as plt
+from image_loader import render_image
+
 from mpl_toolkits.mplot3d import Axes3D
 import plotly.express as px
 
